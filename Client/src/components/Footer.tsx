@@ -17,6 +17,7 @@ function Footer() {
             </nav>
         </div>
         <div className="container mx-auto mt-4">
+            
             <p className="text-center text-sm">Copyright © 2024 Apolliculture. All rights reserved.</p>
             <p className="text-center text-sm">A beekeeping project for the sustainable future of our community.</p>
         </div>
