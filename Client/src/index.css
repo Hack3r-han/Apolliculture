@@ -5,7 +5,7 @@
 .hexagonal-button {
   width: 160px;
   height: 58px;
-  background-color: #FED44C;
+  background-color: #EBC351;
   color: #000000;
   border: none;
   margin: 60px;
@@ -18,7 +18,7 @@
 .hexagonal-button {
   width: 100px;
   height: 58px;
-  background-color: #FED44C;
+  background-color: #EBC351;
   color: #000000;
   border: none;
   margin: 30px;
@@ -39,12 +39,12 @@
 
 .hexagonal-button:before {
   bottom: 100%;
-  border-bottom: 29px solid #FED44C;
+  border-bottom: 29px solid #EBC351;
 }
 
 .hexagonal-button:after {
   top: 100%;
   width: 0;
-  border-top: 29px solid #FED44C;
+  border-top: 29px solid #EBC351;
 }
 
