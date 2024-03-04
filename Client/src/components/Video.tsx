@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Header({ src }: { src: string }) {
+function Video ({ src }: { src: string }) {
   const [isMuted, setIsMuted] = useState(true);
 
   const toggleMute = () => {
@@ -23,4 +23,4 @@ function Header({ src }: { src: string }) {
   );
 }
 
-export default Header;
+export default Video;

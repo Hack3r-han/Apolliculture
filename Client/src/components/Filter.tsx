@@ -1,6 +1,3 @@
-import React from "react"
-
-
 const Filter = () => {
     return (
       <div className=" flex items-center justify-center flex-wrap bg-gray-200 font-bold underlinehover:backdrop-blur-[20px] md:grid-cols-2">
