@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .hexagonal-button {
-  width: 100px;
+  width: 160px;
   height: 58px;
   background-color: #EBC351;
   color: #000000;
@@ -13,10 +13,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
-.hexagonal-button2 {
+.hexagonal-button {
   width: 100px;
   height: 58px;
   background-color: #EBC351;
