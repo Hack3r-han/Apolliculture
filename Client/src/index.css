@@ -1,3 +1,46 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(227, 227, 216);
+  font-family: "Lato", sans-serif;
+}
+
+.video-container {
+  /* Estilos para que coincida con el footer */
+  background-color: #fed550;
+  color: #000;
+  padding: 1rem;
+}
+
+.footer {
+  background-color: #fed550; /* Fondo amarillo */
+  color: #000; /* Texto negro */
+  padding: 1rem; /* Relleno de 1 rem en todos los lados */
+}
+
+.footer__contact {
+  margin-bottom: 1rem; /* Margen inferior de 1 rem */
+  font-size: 0.875rem; /* Tamaño de texto pequeño */
+}
+
+.footer__social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centrado horizontal en dispositivos móviles */
+  margin-left: auto;
+  font-size: 2.5rem; /* Margen izquierdo automático */
+}
+
+.footer__social-icons a {
+  color: #000; /* Texto negro para los iconos */
+  margin-right: 0.5rem; /* Margen derecho de 0.5 rem */
+}
