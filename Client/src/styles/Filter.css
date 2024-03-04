@@ -2,49 +2,4 @@
 @tailwind components;
 @tailwind utilities;
 
-.hexagonal-button {
-  width: 160px;
-  height: 58px;
-  background-color: #EBC351;
-  color: #000000;
-  border: none;
-  margin: 60px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hexagonal-button {
-  width: 100px;
-  height: 58px;
-  background-color: #EBC351;
-  color: #000000;
-  border: none;
-  margin: 30px;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hexagonal-button:before,
-.hexagonal-button:after {
-  content: "";
-  position: absolute;
-  width: 0;
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-}
-
-.hexagonal-button:before {
-  bottom: 100%;
-  border-bottom: 29px solid #EBC351;
-}
-
-.hexagonal-button:after {
-  top: 100%;
-  width: 0;
-  border-top: 29px solid #EBC351;
-}
 
