@@ -3,31 +3,34 @@ import React from 'react';
 
 const Navbar = () => {
   return (
-    
-    <nav className="bg-yellow-400 p-3 py-7 relative ">
-      <div className="flex h-8 items-center justify-between mt-4" >
-      
-          <div className='w-64 h-auto mt-9'>
-          <img src="Group 34.png" alt='logo'/>
-       </div>
 
-        <div className="flex flex-grow ">
-       <input className= "m bg-white border-amber-500 text-black border mx-auto w-7/12 rounded-3xl " type='text' placeholder="    Search..."/>
+    <nav className="bg-amber-400 py:5 lg:py-5 relative ">
+      <div className="container mx-auto flex px-1 xl:px-0" >
 
-       <div className="flex justify-center items center mr-7">
-          <a href="#" className="bg-amber-300 text-black border border-white border-1 py-2 px-5 rounded-md hover:boder-transparent hover:text-yellow-500 hover:bg-white mt4 lg:mt-0 transition ease-in duration-500 ease-in-out lg:mr-3">Admin</a>
-          <a href="#" className="bg-amber-300 text-black border border-white border-1 py-2 px-5 rounded-md hover:boder-transparent hover:text-yellow-500 hover:bg-white mt4 lg:mt-0 transition ease-in duration-500 ease-in-out lg:mr-3">Sign in</a>
+        <div className='flex flex-grow'>
+          <img src="Group 36.png" alt='logo' className="w-40 h-auto md-6  lg:w-60 h-auto lg:mt-[-35px] " />
         </div>
+        <div className='lg:hidden'>
+          <img src="menu-line.png" alt="menu" className='W-20 h-10 mt-9 mr-4 hover:bg-blackbg-amber-300 text-black border border-white rounded-md hover:boder-transparent hover:text-yellow-500 hover:bg-white transition ease-in duration-500 ease-in-out'/>
         </div>
-        
 
-        </div>
-        <div className='item-center justify-center flex space-x-14 mt-5'>
-          
-            <a href="#" className="text-white hover:text-black transition duration-500 ease-in-out lg:mr-7 ">HONEY</a>
-            <a href="#" className="text-white hover:text-black transition duration-500 ease-in-out lg:mr-7">HEALTH</a>
+        <div className="lg:flex hidden flex-grow justify-between">
+
+          <div className='item-center justify-center flex space-x-16 mt-3 ml-4'>
+            <a href="#" className="text-white hover:text-black transition duration-500 ease-in-out">HONEY</a>
+            <a href="#" className="text-white hover:text-black transition duration-500 ease-in-out">HEALTH</a>
             <a href="#" className="text-white hover:text-black transition duration-500 ease-in-out">HOME</a>
             <a href="#" className="text-white hover:text-black transition duration-500 ease-in-out">BEEKEEPING</a>
+
+          </div>
+          <div className='px-9 mt-9'>
+            <a href="#" className="bg-amber-300 text-black border border-white py-2 px-5 rounded-md hover:boder-transparent hover:text-yellow-500 hover:bg-white transition ease-in duration-500 ease-in-out mr-3">Admin</a>
+            <a href="#" className="bg-amber-300 text-black border border-white py-2 px-5 rounded-md hover:boder-transparent hover:text-yellow-500 hover:bg-white transition ease-in duration-500 ease-in-out">Sign in</a>
+          </div>
+        </div>
+      </div>
+      <div className='flex justify-center lg:mt-[-60px]'>
+        <input className="bg-white border border-amber-500 text-black w-8/12 h-7  lg:w-6/12 h-9 rounded-3xl px-4" type='text' placeholder="Search..." />
         </div>
     </nav>
   );
