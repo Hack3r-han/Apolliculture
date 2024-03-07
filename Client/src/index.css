@@ -44,3 +44,21 @@ body {
   color: #000; /* Texto negro para los iconos */
   margin-right: 0.5rem; /* Margen derecho de 0.5 rem */
 }
+
+/* @media (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer__contact {
+    margin-bottom: 0;
+  }
+
+  .footer__social-icons {
+    margin-left: 0;
+  }
+}
+ */

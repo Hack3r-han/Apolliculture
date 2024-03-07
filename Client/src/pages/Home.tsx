@@ -1,10 +1,23 @@
-/* const Home = () => {
-    return (
-        <div>
-            
-            <h1>This is the Home</h1>
-        </div>
-    )
-}
-export default Home  */
+import { sampleCategories } from '../category-data';
+import Header from '../components/Header';
 
+export default function Homepage() {
+  return (
+      <div>
+      <Header />
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        {sampleCategories.map((category) => (
+          <div key={category.id} className="text-center">
+            <img
+              src={category.image}
+              alt={category.name}
+              className="mx-auto w-45 h-45 rounded mb-4"
+            />
+            <h2 className="text-lg font-semibold mb-2">{category.name}</h2>
+            <p className="text-sm">{category.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
