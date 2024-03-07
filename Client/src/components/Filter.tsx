@@ -40,7 +40,7 @@ const Filter = () => {
           <div className='w-13 mt-10'>
             <img src="Group 24.png" alt='hexagon3'/>
           </div>
-          <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
+          <div className='text-white hover:text-black transition duration-500 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
             <button className="text-center mt-10">AND MORE!</button>
           </div>
         </div>
