@@ -1,5 +1,8 @@
 import { sampleCategories } from '../category-data';
 import Header from '../components/Header';
+import video from "../../src/assets/videos/video2.mp4";
+import Filter from "../components/Filter";
+import Video from "../components/Video";
 
 export default function Homepage() {
   return (
@@ -17,7 +20,9 @@ export default function Homepage() {
             <p className="text-sm">{category.description}</p>
           </div>
         ))}
-      </div>
+        </div>
+        <Filter />  
+        <Video src={video}/>
     </div>
   );
 }

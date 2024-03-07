@@ -27,7 +27,7 @@ const Navbar = () => {
           </div>
         </div>
         <div className='flex justify-center lg:mt-[-60px]'>
-          <input className="bg-white border border-amber-500 text-black w-8/12 h-7  lg:w-6/12 h-9 rounded-3xl px-4" type='text' placeholder="Search..." />
+          <input className=" mb-5 bg-white border border-amber-500 text-black w-8/12 h-7  lg:w-6/12 h-9 rounded-3xl px-4" type='text' placeholder="Search..." />
           </div>
       </nav>
     );
