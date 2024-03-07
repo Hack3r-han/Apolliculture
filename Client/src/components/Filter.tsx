@@ -41,7 +41,7 @@ const Filter = () => {
             <img src="Group 24.png" alt='hexagon3'/>
           </div>
           <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-            <button className="text-center mt-10">AND MORE!</button>
+            <button className="text-center mt-10">ANDMORE!</button>
           </div>
         </div>
       </div>
