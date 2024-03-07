@@ -1,5 +1,4 @@
 import Navbar from './components/Navbar'
-import Navbar from './components/Navbar'
 import video from './assets/videos/video2.mp4'
 import Filter from "./components/Filter"
 import Footer from "./components/Footer"
