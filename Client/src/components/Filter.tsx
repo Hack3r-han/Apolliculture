@@ -6,7 +6,7 @@ const Filter = () => {
             <img src="Group 24.png" alt='hexagon1'/>
           </div>
           <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-            <button className="text-center mt-10">MEAD</button>
+            <button className="text-center mt-10">HONEY</button>
           </div>
         </div>
   
@@ -15,7 +15,7 @@ const Filter = () => {
             <img src="Group 24.png" alt='hexagon2'/>
           </div>
           <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-            <button className="text-center mb-20">HONEY</button>
+            <button className="text-center mb-20">HEALTH</button>
           </div>
         </div>
   
@@ -24,7 +24,7 @@ const Filter = () => {
             <img src="Group 24.png" alt='hexagon3'/>
           </div>
           <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-            <button className="text-center mt-10">BALMS</button>
+            <button className="text-center mt-10">HOME DECOR</button>
           </div>
         </div>
   
@@ -33,7 +33,7 @@ const Filter = () => {
             <img src="Group 24.png" alt='hexagon4'/>
           </div>
           <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-            <button className="text-center mb-20">CANDLES</button>
+            <button className="text-center mb-20">BEEKEEPING</button>
           </div>
         </div>
         <div className='relative'>
@@ -41,7 +41,7 @@ const Filter = () => {
             <img src="Group 24.png" alt='hexagon3'/>
           </div>
           <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'>
-            <button className="text-center mt-10">ANDMORE!</button>
+            <button className="text-center mt-10">AND MORE!</button>
           </div>
         </div>
       </div>

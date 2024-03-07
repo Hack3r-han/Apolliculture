@@ -14,10 +14,10 @@ const Navbar = () => {
           <div className="lg:flex hidden flex-grow justify-between">
   
             <div className='item-center justify-center flex space-x-16 mt-3 ml-4'>
-              <a href="#" className="text-white hover:text-black transition duration-500 ease-in-out">HONEY</a>
-              <a href="#" className="text-white hover:text-black transition duration-500 ease-in-out">HEALTH</a>
               <a href="#" className="text-white hover:text-black transition duration-500 ease-in-out">HOME</a>
-              <a href="#" className="text-white hover:text-black transition duration-500 ease-in-out">BEEKEEPING</a>
+              <a href="#" className="text-white hover:text-black transition duration-500 ease-in-out">ABOUT US</a>
+              <a href="#" className="text-white hover:text-black transition duration-500 ease-in-out">PRODUCTS</a>
+              <a href="#" className="text-white hover:text-black transition duration-500 ease-in-out">CONTACT US</a>
   
             </div>
             <div className='px-9 mt-9'>

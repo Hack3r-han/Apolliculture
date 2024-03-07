@@ -14,7 +14,7 @@ export const sampleCategories:Category[] = [
         description: 'From royal jelly serums to beeswax lip balms, pamper yourself with natures potent remedies for radiant skin and overall wellness.',
     },
     {
-        name: 'Home',
+        name: 'Home Decor',
         id: 3,
         image: '../src/assets/images/Home.jpeg',
         description: 'Transform your living space into a sanctuary of warmth and tranquility with our charming array of beeswax candles.',
