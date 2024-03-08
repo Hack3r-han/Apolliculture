@@ -16,13 +16,17 @@ export const router = createBrowserRouter([
                
             },
             {
-                path: "/Dashboard",
+                path: "/dashboard",
                 element: <Dashboard />,
                 
             },
             {
-                path: "/Loginregister",
+                path: "/loginregister",
                 element: <Loginregister />,
+            }
+            {
+                path: "/modal",
+                element: <Modal />,
             }
 
         ],
