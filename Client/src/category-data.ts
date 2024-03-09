@@ -1,6 +1,11 @@
-import { Category } from "./types/Category";
+interface Category {
+    name: string;
+    id: number;
+    image: string;
+    description: string;
+}
 
-export const sampleCategories:Category[] = [
+export const Categories:Category[] = [
     {
         name: 'Honey',
         id: 1,

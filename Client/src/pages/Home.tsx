@@ -1,4 +1,4 @@
-import { sampleCategories } from '../category-data';
+import { Categories } from '../category-data';
 import Header from '../components/Header';
 import video from "../../src/assets/videos/video2.mp4";
 import Filter from "../components/Filter";
@@ -9,7 +9,7 @@ export default function Homepage() {
       <div>
       <Header />
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {sampleCategories.map((category) => (
+        {Categories.map((category) => (
           <div key={category.id} className="text-center">
             <img
               src={category.image}
