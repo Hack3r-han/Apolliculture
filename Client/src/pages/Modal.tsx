@@ -1,9 +1,14 @@
+import Popup from '../components/Popup';
 const Modal = () => {
     return (
         <div>
-            <h1>This is the Modal</h1>
+            
+            <Popup />
+
+            
         </div>
     )
 }
 
 export default Modal 
+
