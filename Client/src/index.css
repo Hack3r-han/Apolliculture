@@ -10,7 +10,6 @@
 body {
   width: 100vw;
   height: 100vh;
-  background-color: rgb(227, 227, 216);
   font-family: "Lato", sans-serif;
 }
 .video-container {
@@ -27,7 +26,7 @@ body {
 }
 
 .footer {
-  background-color: #fed550; /* Fondo amarillo */
+  /*background-color: #fed550; Fondo amarillo */
   color: #000; /* Texto negro */
   padding: 1rem; /* Relleno de 1 rem en todos los lados */
 }

@@ -5,8 +5,8 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 function Footer() {
     return (
-        <footer className="footer">
-        <div className="md:ml-auto flex flex-row justify-center md:justify-end ">
+        <footer className="footer bg-amber-400">
+        <div className="md:ml-auto flex flex-row justify-center md:justify-end">
             <address className="footer__contact  ">Contact: <a href="mailto:info@apolliculture.com">info@apolliculture.com</a> | Phone: (123) 456-7890</address>
             <nav className="footer__social-icons flex justify-center md:justify-end w-full">
                 <a href="https://www.facebook.com/apolliculture" aria-label="Facebook" className="mr-2 mb-2 md:mb-0"><FaSquareFacebook /></a>
