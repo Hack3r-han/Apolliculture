@@ -47,7 +47,7 @@ const AddProducts = () => {
                 rows={4}
                 className="w-full px-3 py-2 border rounded-lg bg-yellow-100 focus:border-blue-500"
                 required
-                placeholder="With its enchanting aroma and luscious flavor, this golden elixir is a testament to the meticulous craftsmanship of our beekeepers..."
+                placeholder="With its enchanting aroma and delightful flavour, this golden elixir is a testament to the meticulous craftsmanship of our beekeepers..."
               />
             </div>
 

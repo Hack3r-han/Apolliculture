@@ -4,7 +4,7 @@ const AdminNavbar = () => {
         <div className="lg:flex hidden flex-grow justify-center">
           <div className="flex space-x-16 mt-3 ml-4">
             <a
-              href="#"
+              href="http://localhost:5173/dashboard"
               className="text-white hover:text-black transition duration-500 ease-in-out"
             >
               DASHBOARD
@@ -16,7 +16,7 @@ const AdminNavbar = () => {
               ORDERS
             </a>
             <a
-              href="#"
+              href="http://localhost:5173/users"
               className="text-white hover:text-black transition duration-500 ease-in-out"
             >
               USERS
