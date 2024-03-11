@@ -1,8 +1,6 @@
-import { Link } from 'react-router-dom';
 
-interface ProductProps {
-  product: Product;
-}
+import { Link } from 'react-router-dom';
+import Product from '../components/Products';
 
 interface Product {
   id: number;
@@ -15,8 +13,10 @@ interface Product {
   units_stock: number;
 }
 
-const Products: React.FunctionComponent<ProductProps> = ({ product }) => {
- 
+const Products: React.FC<{ product: Product }> = ({ product }) => {
+  const handlerShow = () => {
+    // Aquí puedes implementar la lógica para mostrar detalles del producto
+  };
 
   return (
     <>
@@ -26,8 +26,8 @@ const Products: React.FunctionComponent<ProductProps> = ({ product }) => {
           <h3 className="text-gray-900 font-bold text-xl mb-2">{product.title}</h3>
           <div className="flex justify-between items-center">
             <p className="text-gray-700 text-base">${product.price}</p>
-            <p className="text-gray-700 text-base">{product.units_stock}</p>
-            <p className="text-gray-700 text-base">{product.created_date}</p>
+            <p className="text-gray-700 text-base">${product.units_stock}</p>
+            <p className="text-gray-700 text-base">${product.created_date}</p>
             <p className="text-gray-700 text-base">{product.description}</p>
           </div>
         </div>
