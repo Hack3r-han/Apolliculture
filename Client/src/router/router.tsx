@@ -8,6 +8,7 @@ import Root from './Root'
 
 export const router = createBrowserRouter([
     {
+        
         path: "/",
         element: <Root />,
         children: [
@@ -21,12 +22,14 @@ export const router = createBrowserRouter([
                 element: <Dashboard />,
                 
             },
-            {
-                path: "/Modal",
-                element: <Modal/>,
-            }
 
         ],
+        
+    },
+    {
+        path: "/Modal",
+        element: <Modal/>,
+        
     },
 ]);
 

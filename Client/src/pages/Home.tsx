@@ -4,6 +4,7 @@ import video from "../../src/assets/videos/video2.mp4";
 import Filter from "../components/Filter";
 import Video from "../components/Video";
 
+
 export default function Homepage() {
   return (
       <div>
@@ -23,6 +24,7 @@ export default function Homepage() {
         </div>
         <Filter />  
         <Video src={video}/>
+        
     </div>
   );
 }
