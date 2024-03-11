@@ -6,6 +6,7 @@ const Modal = () => {
             <Popup />
 
             
+           
         </div>
     )
 }
