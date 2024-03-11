@@ -1,6 +1,7 @@
 
 import { createBrowserRouter } from "react-router-dom"
 import Home from '../pages/Home'
+import Loginregister from "../pages/Loginregister"
 import Modal from "../pages/Modal"
 import Dashboard from "../pages/Dashboard"
 import Root from './Root'
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
                 element: <Dashboard />,
                 
             },
+            {
+                path: "/Loginregister",
+                element: <Loginregister />,
+            }
 
         ],
         
