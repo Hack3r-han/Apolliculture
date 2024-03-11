@@ -27,6 +27,7 @@ const AuthPage= () => {
     }
   };
 
+  
   return (
     <div className="flex justify-center items-center h-screen">
       <div className="bg-yellow-800 border border-yellow-600 rounded-md p-8 shadow-xl backdrop-filter backdrop-blur-sm bg-opacity-20 relative">
@@ -43,7 +44,6 @@ const AuthPage= () => {
               className="block w-72 py-2.3 px-0 text-lg text-white bg-transparent border-0 border-b-2 border-yellow-300 apperance-none dark:focus:border-yellow-500 focus:outline-none focus:ring-0 focus:text-white focus:border-yellow-600 peer"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              
               required
             />
             <label
@@ -60,7 +60,6 @@ const AuthPage= () => {
               className="block w-72 py-2.3 px-0 text-lg text-white bg-transparent border-0 border-b-2 border-yellow-300 apperance-none dark:focus:border-yellow-500 focus:outline-none focus:ring-0 focus:text-white focus:border-yellow-600 peer"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              
               required
             />
             <label
@@ -88,18 +87,21 @@ const AuthPage= () => {
               </label>
               <GiTreeBeehive
                 className="absolute top-1 right-4 text-yellow-500"
-                />
+              />
             </div>
           )}
-          <div className="flex justify-between items-center mb-4">
-            <div className="flex gap-2 items-center">
-              <input type="checkbox" name="rememberMe" id="rememberMe" />
-              <label htmlFor="rememberMe">Remember Me</label>
+          {/* Mostrar los elementos solo si es el formulario de inicio de sesión */}
+          {isLoginForm && (
+            <div className="flex justify-between items-center mb-4">
+              <div className="flex gap-2 items-center">
+                <input type="checkbox" name="rememberMe" id="rememberMe" />
+                <label htmlFor="rememberMe">Remember Me</label>
+              </div>
+              <Link to="/" className="text-yellow-500">
+                Forgot Password?
+              </Link>
             </div>
-            <Link to="/" className="text-yellow-500">
-              Forgot Password?
-            </Link>
-          </div>
+          )}
           <button
             className="w-full mb-4 text-[18px] mt-6 rounded-full bg-yellow-500 text-yellow-800 hover:bg-yellow-300 hover:text-white py-2 transition-colors"
             type="submit"
