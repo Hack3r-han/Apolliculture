@@ -13,17 +13,17 @@ const AuthPage= () => {
     e.preventDefault();
     if (isLoginForm) {
       // Lógica para el inicio de sesión
-      console.log("Iniciando sesión con:", email, password);
-      setConfirmationMessage("¡Inicio de sesión exitoso!");
+      console.log("Logging in with:", email, password);
+      setConfirmationMessage("Successful login!");
     } else {
       // Lógica para el registro
-      console.log("Registrando usuario:", email, password);
+      console.log("Register user:", email, password);
       if (password !== confirmPassword) {
-        setConfirmationMessage("¡Las contraseñas no coinciden!");
+        setConfirmationMessage("Passwords don't match!");
         return;
       }
       // Aquí iría la lógica para enviar el formulario de registro al servidor
-      setConfirmationMessage("¡Registro exitoso!");
+      setConfirmationMessage("Successful registration!");
     }
   };
 
