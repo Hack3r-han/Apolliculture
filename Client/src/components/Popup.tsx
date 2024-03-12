@@ -81,7 +81,7 @@ const Popup = () => {
 
   return (
     <div className="flex md:flex-row flex-col">
-      {sampleCategories.map((category, index) => (
+      {Categories.map((category, index) => (
         <div key={index} className="md:w-1/2 flex flex-col items-center">
           <img
             src={category.image}
