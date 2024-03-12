@@ -48,6 +48,7 @@ const Modal = ({ isOpen, category, onClose }) => {
         <div className="container mx-auto mt-8">
           <p className="text-center font-bold mb-5 text-2xl">{category.name}</p>
           <p className="text-center text-1xl mb-5">{category.description}</p>
+          <p className="text-lg font-bold text-center mb-5">{category.stock} unid</p>
         </div>
         <div className="mb-5 bg-black text-white border border-white py-2 px-8 rounded-md hover:border-black hover:text-yellow-500 hover:bg-white transition ease-in duration-500 ease-in-out">
           <button className="text justify-center">ADD TO CART</button>
