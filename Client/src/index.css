@@ -26,7 +26,7 @@ body {
 }
 
 .footer {
-  /*background-color: #fed550; Fondo amarillo */
+  background-color: #fed550; /* Fondo amarillo */
   color: #000; /* Texto negro */
   padding: 1rem; /* Relleno de 1 rem en todos los lados */
 }
