@@ -7,7 +7,7 @@ const CategoriesModel = {
     },
 
     getCategorie: async (id: string) => {
-        const [result] = await connection.query(`SELECT * FROM categories WHERE id = ${id}`);
+        const [result] = await connection.query(`SELECT * FROM categories WHERE id = '${id}'`);
         return result;
     },
 
@@ -17,12 +17,12 @@ const CategoriesModel = {
     },
 
     updateCategorie: async (id: string, name: string, description: string) => {
-        const [result] = await connection.query(`UPDATE categories SET name = '${name}', description = '${description}' WHERE id = ${id}`);
+        const [result] = await connection.query(`UPDATE categories SET name = '${name}', description = '${description}' WHERE id = '${id}'`);
         return result;
     },
 
     deleteCategorie: async (id: string) => {
-        const [result] = await connection.query(`DELETE FROM categories WHERE id = ${id}`);
+        const [result] = await connection.query(`DELETE FROM categories WHERE id = '${id}'`);
         return result;
     },
 };

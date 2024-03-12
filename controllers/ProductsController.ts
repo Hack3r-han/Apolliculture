@@ -16,7 +16,7 @@ const ProductsController = {
         try {
             const productId: string = req.params.id;
             const products = await ProductsModel.getProduct(productId);
-            if (!Array.isArray(products) || products.length === 0) {
+            if (!products) {
                 res.status(404).json({ message: `Este producto con id ${productId} no se encuentra` });
                 return;
             }
@@ -28,12 +28,12 @@ const ProductsController = {
 
     addProduct: async (req: Request, res: Response) => {
         try {
-            const { name, price, description, image, category, create_date, units_stock } = req.body;
-            if (!name || !price || !description || !image || !category || !create_date || !units_stock) {
-                res.status(400).json({ message: 'Por favor introduzca los datos del producto' });
+            const { name, price, description, image, units_stock, user_id } = req.body;
+            if (!name || !price || !description || !image || !units_stock || !user_id) {
+                res.status(400).json({ message: 'Por favor introduzca todos los datos del producto' });
                 return;
             }
-            await ProductsModel.createProduct(name, price, description, image, category, create_date, units_stock);
+            await ProductsModel.createProduct(req.body);
             res.status(200).json({ message: 'Creado!' });
             return;
         } catch (error) {
@@ -45,12 +45,12 @@ const ProductsController = {
     updateProduct: async (req: Request, res: Response) => {
         try {
             const id: string = req.params.id;
-            const { name, price, description, image, category, create_date, units_stock } = req.body;
-            if (!name || !price || !description || !image || !category || !create_date || !units_stock) {
-                res.status(400).json({ message: 'Por favor introduzca los datos del producto' });
+            const { name, price, description, image, units_stock } = req.body;
+            if (!name || !price || !description || !image || !units_stock) {
+                res.status(400).json({ message: 'Por favor introduzca todoslos datos del producto' });
                 return;
             }
-            await ProductsModel.updateProduct(id, name, price, description, image, category, create_date, units_stock);
+            await ProductsModel.updateProduct(id, req.body);
             res.status(200).json({ message: 'Actualizado!' });
             return;
         } catch (error) {

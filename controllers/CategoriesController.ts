@@ -63,6 +63,7 @@ export const CategoriesController = {
         try {
             const id: string = req.params.id;
             await CategoriesModel.deleteCategorie(id);
+            res.status(200).json({ message: 'Se borro exitosamente' });
         } catch (error) {
             console.log(error);
             res.status(500).json({ message: 'Hubo un error al eliminar la categoría' });
