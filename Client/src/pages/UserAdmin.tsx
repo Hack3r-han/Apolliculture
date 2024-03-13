@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import usersData from '../../api/users.json';
-import AdminNavbar from '../components/AdminNavbar';
+import AdminNavbar from '../components/adminnavbar/AdminNavbar';
 import backgroundImage from "../assets/images/BgLogin.svg";
 
 interface User {

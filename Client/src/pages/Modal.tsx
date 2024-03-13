@@ -1,4 +1,4 @@
-import Popup from '../components/Popup';
+import Popup from '../components/popup/Popup';
 const Modal = () => {
     return (
         <div>

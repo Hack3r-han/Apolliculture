@@ -1,8 +1,8 @@
 import { Categories } from '../category-data';
-import Header from '../components/Header';
+import Header from '../components/header/Header';
 import video from "../../src/assets/videos/video2.mp4";
-import Filter from "../components/Filter";
-import Video from "../components/Video";
+import Filter from "../components/filter/Filter";
+import Video from "../components/video/Video";
 
 
 export default function Homepage() {
