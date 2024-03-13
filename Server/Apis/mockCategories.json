@@ -1,0 +1,22 @@
+[
+    {
+        "id": "36eb6ebc-da6d-11ee-a77b-9828a63b47d6",
+        "name": "honey",
+        "description": "estos son los diferentes tipos de miel"
+    },
+    {
+        "id": "36eb729e-da6d-11ee-a77b-9828a63b47d6",
+        "name": "health",
+        "description": "estos son los derivados de la miel aplicados a la salud"
+    },
+    {
+        "id": "36eb740d-da6d-11ee-a77b-9828a63b47d6",
+        "name": "home",
+        "description": "estos son los derivados de la miel aplicados al hogar"
+    },
+    {
+        "id": "36eb748a-da6d-11ee-a77b-9828a63b47d6",
+        "name": "beekeeping",
+        "description": "estos son los accesorios necesarios para la apicultura"
+    }
+]
