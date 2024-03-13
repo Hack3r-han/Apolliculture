@@ -1,5 +1,5 @@
-import AddProducts from "../components/AddProducts";
-import AdminNavbar from "../components/AdminNavbar";
+import AddProducts from "../components/addproducts/AddProducts";
+import AdminNavbar from "../components/adminnavbar/AdminNavbar";
 import backgroundImage from "../assets/images/BgLogin.svg";
 
 const Dashboard = () => {

@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import {Link} from 'react-router-dom';
 import { LiaCartPlusSolid } from 'react-icons/lia';
 import { FaMagnifyingGlass } from "react-icons/fa6";
 
