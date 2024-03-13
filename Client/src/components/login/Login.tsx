@@ -106,7 +106,7 @@ const AuthPage= () => {
             className="w-full mb-4 text-[18px] mt-6 rounded-full bg-yellow-500 text-yellow-800 hover:bg-yellow-300 hover:text-white py-2 transition-colors"
             type="submit"
           >
-            {isLoginForm ? "Register": "Login"}
+            {isLoginForm ? "Login" :"Register"}
           </button>
           <div>
             <span className="m-4 flex justify-center items-center">
