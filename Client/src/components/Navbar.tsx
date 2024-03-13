@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { LiaCartPlusSolid } from 'react-icons/lia';
+import { FaMagnifyingGlass } from "react-icons/fa6";
 
 const Navbar = () => {
     return (
@@ -20,16 +22,17 @@ const Navbar = () => {
             <Link to="/Home#about" className="text-white hover:text-black transition duration-500 ease-in-out">ABOUT US</Link>
               <a href="#" className="text-white hover:text-black transition duration-500 ease-in-out">PRODUCTS</a>
               <a href="#contact" className="text-white hover:text-black transition duration-500 ease-in-out">CONTACT US</a>
-  
             </div>
-            <div className=' mt-9'>
-            <Link to="/dashboard" className="bg-amber-300 text-black border border-white py-2 px-5 rounded-md hover:border-transparent hover:text-yellow-500 hover:bg-white transition ease-in duration-500">Admin</Link>
-            <Link to="/loginregister" className="bg-amber-300 text-black border border-white py-2 px-5 rounded-md hover:border-transparent hover:text-yellow-500 hover:bg-white transition ease-in duration-500">Sign in</Link>
+            <div className=' mt-9 gap-4 space-x-4'>
+            <Link to="/dashboard" className=" bg-amber-300 text-black border border-white py-2 px-5 rounded-md hover:border-transparent hover:text-yellow-500 hover:bg-white transition ease-in duration-500">Admin</Link>
+            <Link to="/loginregister" className=" bg-amber-300 text-black border border-white py-2 px-5 rounded-md hover:border-transparent hover:text-yellow-500 hover:bg-white transition ease-in duration-500">Sign in</Link>
             </div>
           </div>
         </div>
-        <div className='flex justify-center lg:mt-[-60px]'>
-          <input className=" mb-5 bg-white border border-amber-500 text-black w-8/12   lg:w-6/12 h-9 rounded-3xl px-4" type='text' placeholder="Search..." />
+        <div className='gap-4 space-x-1 flex justify-center lg:mt-[-60px]'>
+        <a href="" aria-label="cart" className=" mr-2 mb-8 text-white-500 text-3xl "><LiaCartPlusSolid /></a>
+          <a href="" aria-label="inglass" className="  text-white-500 text-2xl"><FaMagnifyingGlass /></a>
+          <input  className=" mb-5 bg-white border border-amber-500 text-black w-2/12 lg:w-4/12 h-9 rounded-3xl px-4"type='text' placeholder="Search..." />
           </div>
       </nav>
     );
