@@ -1,4 +1,4 @@
-import Car from "../components/car/Car";
+import Car from "../components/cart/Car";
 
 const ShoppingCar = () => {
     return (
