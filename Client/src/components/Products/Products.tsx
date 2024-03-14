@@ -18,7 +18,7 @@ const Product: React.FC<ProductProps> = (props) => {
     <div className="bg-White p-8  flex flex-col items-center gap-2 text-center text-black border mt-16 border-amber-400 border-2 ml-2 mr-2 ">
       <img
         src={image}
-        className="w-60 h-60 object-cover lg: w-30 h-40 -mt-16 rounded-full bg-black border-2 border-amber-400"
+        className="w-60 h-60 object-cover lg: w-60 h-60 -mt-16 rounded-full bg-black border-2 border-amber-400"
         alt=""
       />
       
