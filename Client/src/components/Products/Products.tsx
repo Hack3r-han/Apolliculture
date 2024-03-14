@@ -1,9 +1,6 @@
 import React from "react";
-<<<<<<< HEAD
-=======
 import Popup from "../Popup"
 import Root from "../../router/Root";
->>>>>>> feature/Products
 
 interface ProductProps {
   image: string;
