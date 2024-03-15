@@ -8,21 +8,22 @@ const ProductsController = {
             res.json(products);
         } catch (error) {
             console.log(error);
-            res.status(500).json({ message: 'Hubo un error al leer el producto' });
+            res.status(500).json({ message: 'There was an error reading the product' });
         }
     },
     
     getProduct: async (req: Request, res: Response) => {
         try {
             const productId: string = req.params.id;
-            const products = await ProductsModel.getProduct(productId);
-            if (!products) {
-                res.status(404).json({ message: `Este producto con id ${productId} no se encuentra` });
+            const product = await ProductsModel.getProduct(productId);
+            if (!product) {
+                res.status(404).json({ message: `The product with id ${productId} has not found` });
                 return;
             }
-            res.json(products);
+            res.json(product);
         } catch (error) {
             console.log(error);
+            res.status(500).json({ message: 'There was an error reading the product' });
         }
     },
 
@@ -30,15 +31,15 @@ const ProductsController = {
         try {
             const { name, price, description, image, units_stock, user_id } = req.body;
             if (!name || !price || !description || !image || !units_stock || !user_id) {
-                res.status(400).json({ message: 'Por favor introduzca todos los datos del producto' });
+                res.status(400).json({ message: 'Please enter the product information' });
                 return;
             }
             await ProductsModel.createProduct(req.body);
-            res.status(200).json({ message: 'Creado!' });
+            res.status(201).json({ message: 'Product created correctly' });
             return;
         } catch (error) {
             console.log(error);
-            res.status(500).json({ message: 'Hubo un error al crear este producto' });
+            res.status(500).json({ message: 'There was an error creating this product' });
         }   
     },
 
@@ -47,15 +48,15 @@ const ProductsController = {
             const id: string = req.params.id;
             const { name, price, description, image, units_stock } = req.body;
             if (!name || !price || !description || !image || !units_stock) {
-                res.status(400).json({ message: 'Por favor introduzca todoslos datos del producto' });
+                res.status(400).json({ message: 'Please enter all product information' });
                 return;
             }
             await ProductsModel.updateProduct(id, req.body);
-            res.status(200).json({ message: 'Actualizado!' });
+            res.status(200).json({ message: 'Product up to date!' });
             return;
         } catch (error) {
             console.log(error);
-            res.status(500).json({ message: 'Hubo un error al actualizar el producto' });
+            res.status(500).json({ message: 'There was an error while Updating the product' });
         }        
     },
     
@@ -63,12 +64,13 @@ const ProductsController = {
         try {
             const id: string = req.params.id;
             await ProductsModel.deleteProduct(id);
-            res.status(200).json({ message: 'Producto eliminado correctamente' });
+            res.status(200).json({ message: 'Product successfully deleted' });
         } catch (error) {
             console.log(error);
-            res.status(500).json({ message: 'Hubo un error al eliminar el producto' });
+            res.status(500).json({ message: 'There was an error deleting the product' });
         }
     },
 };
 
 export default ProductsController;
+

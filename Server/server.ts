@@ -8,6 +8,7 @@ import UsersRouter from './routes/UsersRouter';
 import ProductsRouter from './routes/ProductsRouter';
 import CategoriesRouter from './routes/CategoriesRouter';
 import OrdersRouter from './routes/OrdersRouter';
+import OrdersDetailsRouter from './routes/OrdersDetailsRouter'
 
 //Crea instancia de aplicación Express y la asigna a variable app
 const app = express();
@@ -24,6 +25,8 @@ app.use("/products/", ProductsRouter);
 app.use("/categories/", CategoriesRouter);
 
 app.use("/orders/", OrdersRouter);
+
+app.use("/ordersdetails/", OrdersDetailsRouter);
 
 //se inicia el servidor Express y hace que escuche en el puerto especificado (port)
 //ya funcioando el servidor imprime por consola URL en la que esta el servidor

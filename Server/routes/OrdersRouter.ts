@@ -8,7 +8,7 @@ OrdersRouter.route("/").get(OrdersController.getAllOrders);
 OrdersRouter.route("/:id").get(OrdersController.getOrder);
 
 //proteccion de conexion
-OrdersRouter.route("/").post(isAdmin,OrdersController.addOrder);
+OrdersRouter.route("/").post(OrdersController.addOrder);
 OrdersRouter.route("/:id").put(OrdersController.updateOrder);
 OrdersRouter.route("/:id").delete(OrdersController.deleteOrder);
 
