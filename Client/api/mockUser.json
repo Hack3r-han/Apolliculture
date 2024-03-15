@@ -1,4 +1,5 @@
-[
+{
+    "mockUsers":[
     {
         "id": "21276063-da59-11ee-a77b-9828a63b47d6",
         "username": "pepo",
@@ -63,3 +64,4 @@
         "admin": 0
     }
 ]
+}
