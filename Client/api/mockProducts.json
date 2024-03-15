@@ -1,0 +1,58 @@
+{
+    "Products": [
+        {
+            "id": "1d2a9821-dd84-11ee-8b47-9828a63b47d6",
+            "name": "Colmena",
+            "price": 35,
+            "description": "Colmena langstroth",
+            "image": "no hay",
+            "units_stock": 100,
+            "user_id": "36ea17c6-da6d-11ee-a77b-9828a63b47d6"
+        },
+        {
+            "id": "36eaaaf7-da6d-11ee-a77b-9828a63b47d6",
+            "name": "miel monofloral",
+            "price": 20.98,
+            "description": "Bajo el nombre de miel monofloral podemos incluir todos aquellos tipos de miel que se componen principalmente del néctar de una sola especie",
+            "image": "",
+            "units_stock": 30,
+            "user_id": "cc1b1587-da6c-11ee-a77b-9828a63b47d6"
+        },
+        {
+            "id": "36eab26d-da6d-11ee-a77b-9828a63b47d6",
+            "name": "miel multifloral",
+            "price": 15.55,
+            "description": "Esta se compone de una mezcla de flores que deja como resultado una miel con notas saladas, ácidas y aromas florales y herbales",
+            "image": "",
+            "units_stock": 20,
+            "user_id": "cc1b1587-da6c-11ee-a77b-9828a63b47d6"
+        },
+        {
+            "id": "36eab385-da6d-11ee-a77b-9828a63b47d6",
+            "name": "miel de mezquite",
+            "price": 8.19,
+            "description": "Puede lucir con un tono amarillo pálido o blanco cremoso, huele ligeramente a resina y madera",
+            "image": "",
+            "units_stock": 10,
+            "user_id": "cc1b1587-da6c-11ee-a77b-9828a63b47d6"
+        },
+        {
+            "id": "36eab43d-da6d-11ee-a77b-9828a63b47d6",
+            "name": "Colmena",
+            "price": 35,
+            "description": "Colmena langstroth",
+            "image": "no hay",
+            "units_stock": 100,
+            "user_id": "36ea17c6-da6d-11ee-a77b-9828a63b47d6"
+        },
+        {
+            "id": "3e3ce575-dfd2-11ee-8b47-9828a63b47d6",
+            "name": "Cazapolen",
+            "price": 15,
+            "description": "Cazapolen de madera para Colmena",
+            "image": "no hay",
+            "units_stock": 10,
+            "user_id": "36e9556d-da6d-11ee-a77b-9828a63b47d6"
+        }
+    ]
+}
