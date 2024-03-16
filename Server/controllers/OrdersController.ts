@@ -8,7 +8,7 @@ const OrdersController = {
             res.json(orders);
         } catch (error) {
             console.log(error);
-            res.status(500).json({ message: 'Hubo un error al leer la orden' });
+            res.status(500).json({ message: 'There was an error reading the order' });
         }
     },
     
@@ -17,45 +17,46 @@ const OrdersController = {
             const ordersId: string = req.params.id;
             const orders = await ordersModel.getOrder(ordersId);
             if (!orders) {
-                res.status(404).json({ message: `Esta orden con id ${ordersId} no se encuentra` });
+                res.status(404).json({ message: `The order with id  ${ordersId} has not found` });
                 return;
             }
             res.json(orders);
         } catch (error) {
             console.log(error);
+            res.status(500).json({ message: 'There was an error reading the order' });
         }
     },
 
     addOrder: async (req: Request, res: Response) => {
         try {
-            const { ammount, user_id } = req.body;
-            if ( !ammount || !user_id) {
-                res.status(400).json({ message: 'Por favor introduzca todos los datos de la orden ' });
+            const { amount, user_id, order_details } = req.body;
+            if (!amount || !user_id || !order_details || order_details.length === 0) {
+                res.status(400).json({ message: 'Please enter the order information' });
                 return;
             }
             await ordersModel.createOrder(req.body);
-            res.status(200).json({ message: 'Creada la orden' });
+            res.status(201).json({ message: 'order created correctly!' });
             return;
         } catch (error) {
             console.log(error);
-            res.status(500).json({ message: 'Hubo un error al crear esta orden' });
+            res.status(500).json({ message: 'There was an error creating this order' });
         }   
     },
 
     updateOrder: async (req: Request, res: Response) => {
         try {
             const id: string = req.params.id;
-            const { ammount, description} = req.body;
-            if (!ammount || !description) {
-                res.status(400).json({ message: 'Por favor introduzca todos los datos de a orden' });
+            const { amount, description} = req.body;
+            if (!amount || !description) {
+                res.status(400).json({ message: 'Please enter all order information' });
                 return;
             }
             await ordersModel.updateOrder(id, req.body);
-            res.status(200).json({ message: 'Actualizada la orden!' });
+            res.status(200).json({ message: 'Order up to date!' });
             return;
         } catch (error) {
             console.log(error);
-            res.status(500).json({ message: 'Hubo un error al actualizar la orden' });
+            res.status(500).json({ message: 'There was an error while Updating the order' });
         }        
     },
     
@@ -63,10 +64,10 @@ const OrdersController = {
         try {
             const id: string = req.params.id;
             await ordersModel.deleteOrder(id);
-            res.status(200).json({ message: 'La orden se ha eliminado correctamente' });
+            res.status(200).json({ message: 'Order successfully deleted' });
         } catch (error) {
             console.log(error);
-            res.status(500).json({ message: 'Hubo un error al eliminar la orden' });
+            res.status(500).json({ message: 'There was an error deleting the order' });
         }
     },
 };

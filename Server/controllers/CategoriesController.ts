@@ -8,21 +8,22 @@ export const CategoriesController = {
             res.json(categories);
         } catch (error) {
             console.log(error);
-            res.status(500).json({ message: 'Hubo un error al leer la categoría' });
+            res.status(500).json({ message: 'There was an error reading the categories' });
         }
     },
 
     getCategorie: async (req: Request, res: Response) => {
         try {
-            const categorieId: string = req.params.id;
-            const categories = await CategoriesModel.getCategorie(categorieId);
-            if (!Array.isArray(categories) || categories.length === 0) {
-                res.status(404).json({ message: `Esta categoría con id ${categorieId} no se encuentra` });
+            const categoryId: string = req.params.id;
+            const categories:any = await CategoriesModel.getCategorie(categoryId);
+            if (!categories || categories.length === 0) {
+                res.status(404).json({ message: `The categories with id ${categoryId} has not found` });
                 return;
             }
             res.json(categories);
         } catch (error) {
             console.log(error);
+            res.status(500).json({ message: 'There was an error reading the categories' });
         }
     },
 
@@ -30,15 +31,15 @@ export const CategoriesController = {
         try {
             const { name, description } = req.body;
             if (!name || !description ) {
-                res.status(400).json({ message: 'Por favor introduzca los datos de la categoría' });
+                res.status(400).json({ message: 'Please enter the categories informatio' });
                 return;
             }
             await CategoriesModel.createCategorie(name, description);
-            res.status(200).json({ message: 'Creado!' });
+            res.status(201).json({ message: 'Categories created correctly!' });
             return;
         } catch (error) {
             console.log(error)
-            res.status(500).json({ message: 'Hubo un error al crear esta categoría' }); 
+            res.status(500).json({ message: 'There was an error creating this categories' }); 
         }
     },
 
@@ -47,15 +48,15 @@ export const CategoriesController = {
             const id: string = req.params.id;
             const { name, description } = req.body;
             if (!name || !description ) {
-                res.status(400).json({ message: 'Por favor introduzca los datos de la categoría' });
+                res.status(400).json({ message: 'Please enter all categories information' });
                 return;
             }
             await CategoriesModel.updateCategorie(id, name, description);
-            res.status(200).json({ message: '¡Actualizado!' });
+            res.status(200).json({ message: 'Categories up to date!' });
             return;
         } catch (error) {
             console.log(error);
-            res.status(500).json({ message: 'Hubo un error al actualizar la categoría' });
+            res.status(500).json({ message: 'There was an error while Updating the categories' });
         }
     },
 
@@ -63,9 +64,10 @@ export const CategoriesController = {
         try {
             const id: string = req.params.id;
             await CategoriesModel.deleteCategorie(id);
+            res.status(200).json({ message: 'Categories successfully deleted' });
         } catch (error) {
             console.log(error);
-            res.status(500).json({ message: 'Hubo un error al eliminar la categoría' });
+            res.status(500).json({ message: 'There was an error deleting the categories' });
         }
     },
 };
