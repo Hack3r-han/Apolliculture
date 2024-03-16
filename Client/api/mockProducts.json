@@ -1,5 +1,4 @@
-{
-    "Products": [
+[
         {
             "id": "1d2a9821-dd84-11ee-8b47-9828a63b47d6",
             "name": "Colmena",
@@ -54,5 +53,4 @@
             "units_stock": 10,
             "user_id": "36e9556d-da6d-11ee-a77b-9828a63b47d6"
         }
-    ]
-}
+]
