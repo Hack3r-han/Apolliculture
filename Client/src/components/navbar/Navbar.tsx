@@ -33,7 +33,8 @@ const Navbar = () => {
             <a href="/Home#about" className="block text-lg text-gray-800 font-semibold mb-2">ABOUT US</a>
             <a href="/ProductList" className="block text-lg text-gray-800 font-semibold mb-2">PRODUCTS</a>
             <a href="#contact" className="block text-lg text-gray-800 font-semibold mb-2">CONTACT US</a>
-            <a href="/dashboard" className="block text-amber-400 text-xl font-semibold mb-2">ADMIN</a>
+            <a href="/users" className="block text-amber-400 text-xl font-semibold mb-2">USERS</a>
+            <a href="/dashboard" className="block text-amber-400 text-xl font-semibold mb-2">SELL</a>
             <a href="/loginregister" className="block text-amber-400 text-xl font-semibold mb-2">SIGN IN</a>
           </div>
         </div>
