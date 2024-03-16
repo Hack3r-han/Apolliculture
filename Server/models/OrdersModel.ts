@@ -3,7 +3,11 @@ import connectionPrisma from "../database/PrismaConnection";
 
 const OrdersModel = {
     getAllOrders: async () => {
-        const result = connectionPrisma.orders.findMany();
+        const result = connectionPrisma.orders.findMany({
+            include: {
+                order_details: true
+            }
+        });
         //const [result] = await connection.query('SELECT * FROM orders');
         return result;
     },
@@ -17,10 +21,12 @@ const OrdersModel = {
         //const [result] = await connection.query(`SELECT * FROM orders WHERE id = ${id}`);
         return result;
     },
-
     createOrder: async (body: any) => {
         //
-        body.create_date = new Date();
+        body.order_date = new Date();
+        body.order_details = {
+            create: body.order_details,
+          }
         const result = connectionPrisma.orders.create({
                 data: body,
             });
