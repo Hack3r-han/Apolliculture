@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import AddProducts from "../components/addproducts/AddProducts";
+import EditProducts from "../components/editproducts/EditProducts";
 import backgroundImage from "../assets/images/BgLogin.svg";
 import productsData from "../../api/mockProducts.json";
 import cardImage from "../assets/images/HoneySticker.jpeg";
@@ -40,7 +41,7 @@ const Dashboard = () => {
                                 </div>
                             </div>
                             <div className="p-4 flex justify-end">
-                                <button type="button" className="mr-3 text-sm bg-amber-400 hover:bg-amber-300 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Edit</button>
+                                < EditProducts />
                                 <button type="button" className="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Delete</button>
                             </div>
                         </div>

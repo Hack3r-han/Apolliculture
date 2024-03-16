@@ -4,21 +4,21 @@ import backgroundImage from "../../assets/images/Bees_bg.jpeg";
 
 Modal.setAppElement("#root");
 
-const AddProducts = () => {
+const EditProducts = () => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
   return (
     <section>
       <button
-        className="block mx-auto px-4 py-2 rounded bg-amber-400 text-lg text-white font-bold mb-6"
+        className="mr-3 text-sm bg-amber-400 hover:bg-amber-300 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
         onClick={() => setModalIsOpen(true)}
       >
-        ADD PRODUCT
+        Edit
       </button>
       <Modal
         isOpen={modalIsOpen}
         onRequestClose={() => setModalIsOpen(false)}
-        contentLabel="Add Products Modal"
+        contentLabel="Edit Products Modal"
         style={{
           content: {
             backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), url(${backgroundImage})`,
@@ -106,7 +106,7 @@ const AddProducts = () => {
             className="block mx-auto px-4 py-2 rounded bg-amber-400 text-lg text-white font-bold mb-6"
             onClick={() => setModalIsOpen(false)}
           >
-            ADD PRODUCT
+            EDIT PRODUCT
           </button>
         </div>
       </Modal>
@@ -114,4 +114,4 @@ const AddProducts = () => {
   );
 };
 
-export default AddProducts;
+export default EditProducts;
