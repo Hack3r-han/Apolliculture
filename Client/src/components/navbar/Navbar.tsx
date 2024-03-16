@@ -26,7 +26,7 @@ const Navbar = () => {
 
         <div className={`lg:hidden fixed top-0 left-0 h-full bg-white w-60 shadow-md z-50 transition duration-300 ease-in-out transform ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
           <div>
-          <img src="../src/assets/images/logo.png" alt='logo' className="w-40 h-auto md-6  lg:w-60 lg:mt-[-35px] " />       </div>
+          <img src="../src/assets/images/ApolliLogo.png" alt='logo' className="w-40 h-auto md-6  lg:w-60 lg:mt-[-35px] " />       </div>
           
           <div className='p-4'>
             <a href="/Home" className="block text-lg text-gray-800 font-semibold mb-2">HOME</a>
