@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FiMenu, FiX } from "react-icons/fi";
+import { FaUserCircle } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -45,14 +46,15 @@ const Navbar = () => {
             <a href="/ProductList" className="text-white hover:text-black transition duration-500 ease-in-out">PRODUCTS</a>
             <a href="#contact" className="text-white hover:text-black transition duration-500 ease-in-out">CONTACT US</a>
           </div>
-          <div className='px-9 mt-9'>
+          <div className='flex items-center px-9 mt-9'>
+            <a href="/users"><FaUserCircle className="w-8 h-8 mr-3" /></a>
             <a href="/dashboard" className="bg-amber-300 text-black border border-white py-2 px-5 rounded-md hover:border-transparent hover:text-yellow-500 hover:bg-white transition ease-in duration-500 ease-in-out mr-3">Sell</a>
             <a href="/loginregister" className="bg-amber-300 text-black border border-white py-2 px-5 rounded-md hover:border-transparent hover:text-yellow-500 hover:bg-white transition ease-in duration-500 ease-in-out">Sign in</a>
           </div>
           </div>
       <div className='lg: hidden flex justify-center lg:mt-[-60px]'>
           <input className=" mb-5 bg-white border border-amber-500 text-black w-8/12 h-7  lg:w-6/12 h-9 rounded-3xl px-4" type='text' placeholder="Search..." />
-    </div>
+      </div>
     </div>
     </nav>
   );
