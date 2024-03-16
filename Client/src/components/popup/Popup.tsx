@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { RiStarLine } from 'react-icons/ri';
 import { LiaCartPlusSolid } from 'react-icons/lia';
 import { AiOutlineHeart } from 'react-icons/ai';
-import { Categories } from '../../category-data';
+import { Categories } from '../../../api/category-data';
 
 const Modal = ({ isOpen, category, onClose }) => {
   if (!isOpen || !category) {

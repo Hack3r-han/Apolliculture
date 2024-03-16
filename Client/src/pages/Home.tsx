@@ -1,4 +1,4 @@
-import { Categories } from '../category-data';
+import { Categories } from '../../api/category-data';
 import Header from '../components/header/Header';
 import video from "../../src/assets/videos/video2.mp4";
 import Filter from "../components/filter/Filter";

@@ -25,7 +25,7 @@ const Navbar = () => {
             </div>
             <div className=' mt-9 gap-4 space-x-4'>
             <Link to="/dashboard" className=" bg-amber-300 text-black border border-white py-2 px-5 rounded-md hover:border-transparent hover:text-yellow-500 hover:bg-white transition ease-in duration-500">Admin</Link>
-            <Link to="/loginregister" className=" bg-amber-300 text-black border border-white py-2 px-5 rounded-md hover:border-transparent hover:text-yellow-500 hover:bg-white transition ease-in duration-500">Sign in</Link>
+            <Link to="/loginPage" className=" bg-amber-300 text-black border border-white py-2 px-5 rounded-md hover:border-transparent hover:text-yellow-500 hover:bg-white transition ease-in duration-500">Sign in</Link>
             </div>
           </div>
         </div>
