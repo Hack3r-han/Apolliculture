@@ -47,7 +47,7 @@ const Navbar = () => {
             <a href="#contact" className="text-white hover:text-black transition duration-500 ease-in-out">CONTACT US</a>
           </div>
           <div className='px-9 mt-9'>
-            <a href="/dashboard" className="bg-amber-300 text-black border border-white py-2 px-5 rounded-md hover:border-transparent hover:text-yellow-500 hover:bg-white transition ease-in duration-500 ease-in-out mr-3">Admin</a>
+            <a href="/dashboard" className="bg-amber-300 text-black border border-white py-2 px-5 rounded-md hover:border-transparent hover:text-yellow-500 hover:bg-white transition ease-in duration-500 ease-in-out mr-3">Sell</a>
             <a href="/loginregister" className="bg-amber-300 text-black border border-white py-2 px-5 rounded-md hover:border-transparent hover:text-yellow-500 hover:bg-white transition ease-in duration-500 ease-in-out">Sign in</a>
           </div>
           </div>
