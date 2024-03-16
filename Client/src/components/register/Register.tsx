@@ -1,5 +1,6 @@
 import  { SetStateAction, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import registerUser from "../services/AuthRegister";
 /* import { Link } from "react-router-dom"; */
 
 
@@ -33,22 +34,35 @@ const Register = () => {
     setEmail(e.target.value);
   };
 
-  const handleSubmit = (e: { preventDefault: () => void; }) => {
+  const handleSubmit = async (e: { preventDefault: () => void; }) => {
     e.preventDefault();
     
     // Verificar que todos los campos estén llenos
     if (username === "" || password === "" || firstName === "" || lastName === "" || email === "") {
       setError(true);
-      setSuccessMessage("");
+      setSuccessMessage("Welcomo to Apolliculture!");
       return;
     }
 
-    // Mostrar un mensaje de éxito
-    setSuccessMessage("Account created successfully!");
+       // Construir el objeto de usuario
+       const newUser = {
+        username,
+        password,
+        firstName,
+        lastName,
+        email,
+      };
 
-    // Si todos los campos están llenos, redirigir a la página de inicio de sesión
-    navigate("/loginPage");
-  };
+      const success = await registerUser(newUser);
+      if (success) {
+        // Manejar redirección u otras acciones de éxito aquí
+        console.log('Usuario registrado exitosamente.');
+        navigate('/loginPage');
+      } else {
+        // Manejar error de registro aquí
+        console.error('Error al registrar el usuario.');
+      }
+    };
 
   return (
     <section className="flex justify-center items-center lg:py-12 md:py-8 sm:py-8 ">
