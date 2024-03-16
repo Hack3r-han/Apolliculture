@@ -22,7 +22,7 @@ export async function uploadImageController(req: Request, res: Response) {
         fs.renameSync(req.file.path, newPath);
 
         // Luego, subir la imagen a Cloudinary
-        const imageUrl = await uploadImage(req.file);
+        const imageUrl = await uploadImage(newPath);
 
         res.json({ imageUrl });
     } catch (error) {
