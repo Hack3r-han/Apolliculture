@@ -35,7 +35,7 @@ const Navbar = () => {
             <a href="#contact" className="block text-lg text-gray-800 font-semibold mb-2">CONTACT US</a>
             <a href="/users" className="block text-amber-400 text-xl font-semibold mb-2">USERS</a>
             <a href="/dashboard" className="block text-amber-400 text-xl font-semibold mb-2">SELL</a>
-            <a href="/loginregister" className="block text-amber-400 text-xl font-semibold mb-2">SIGN IN</a>
+            <a href="/loginPage" className="block text-amber-400 text-xl font-semibold mb-2">SIGN IN</a>
           </div>
         </div>
 
@@ -50,7 +50,7 @@ const Navbar = () => {
           <div className='flex items-center px-9 mt-9'>
             <a href="/users"><FaUserCircle className="w-8 h-8 mr-3" /></a>
             <a href="/dashboard" className="bg-amber-300 text-black border border-white py-2 px-5 rounded-md hover:border-transparent hover:text-yellow-500 hover:bg-white transition ease-in duration-500 ease-in-out mr-3">Sell</a>
-            <a href="/loginregister" className="bg-amber-300 text-black border border-white py-2 px-5 rounded-md hover:border-transparent hover:text-yellow-500 hover:bg-white transition ease-in duration-500 ease-in-out">Sign in</a>
+            <a href="/loginPage" className="bg-amber-300 text-black border border-white py-2 px-5 rounded-md hover:border-transparent hover:text-yellow-500 hover:bg-white transition ease-in duration-500 ease-in-out">Sign in</a>
           </div>
           </div>
       <div className='lg: hidden flex justify-center lg:mt-[-60px]'>

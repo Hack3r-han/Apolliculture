@@ -49,8 +49,7 @@ export const router = createBrowserRouter([
     },
     {
         path: "/ShoppingCar",
-    element:<ShoppingCar/>}]
-    }
-]);
-
+    element:<ShoppingCar/>,
+    },
+])   
 
