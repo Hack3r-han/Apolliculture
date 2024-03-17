@@ -30,7 +30,7 @@ const Login = () => {
 
     const user = await AuthService.login(username, password);
     if (user) {
-      navigate("/home");
+      navigate("/");
     } else {
       setError("User not found, please check your username or password is incorrect");
     }
