@@ -7,6 +7,7 @@ import Dashboard from "../pages/Dashboard"
 import ProductList from "../pages/ProductList"
 import Root from './Root'
 import UserAdmin from "../pages/UserAdmin";
+import ShoppingCar from "../pages/ShoppingCar"
 
 
 export const router = createBrowserRouter([
@@ -38,13 +39,18 @@ export const router = createBrowserRouter([
                 element: <UserAdmin />,
                 
             },
-        ],
         
-    },
+        
+    
     {
         path: "/Modal",
         element: <Modal/>,
         
     },
+    {
+        path: "/ShoppingCar",
+    element:<ShoppingCar/>}]
+    }
 ]);
+
 
