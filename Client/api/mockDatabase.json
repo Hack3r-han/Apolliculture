@@ -3,7 +3,7 @@
     {
       "id": "1d2a9821-dd84-11ee-8b47-9828a63b47d6",
       "name": "Colmena",
-      "price": 20,
+      "price": 27,
       "description": "Colmena langstroth",
       "image": "no hay",
       "units_stock": 100,
@@ -35,15 +35,6 @@
       "image": "",
       "units_stock": 10,
       "user_id": "cc1b1587-da6c-11ee-a77b-9828a63b47d6"
-    },
-    {
-      "id": "36eab43d-da6d-11ee-a77b-9828a63b47d6",
-      "name": "Colmena",
-      "price": 35,
-      "description": "Colmena langstroth",
-      "image": "no hay",
-      "units_stock": 100,
-      "user_id": "36ea17c6-da6d-11ee-a77b-9828a63b47d6"
     },
     {
       "id": "3e3ce575-dfd2-11ee-8b47-9828a63b47d6",
@@ -82,15 +73,6 @@
       "last_name": "Guerra",
       "email": "isaac@gmail.com",
       "admin": 0
-    },
-    {
-      "id": "36ea193a-da6d-11ee-a77b-9828a63b47d6",
-      "username": "hannah",
-      "password": "$2b$08$f76bVLUpLTq2.M4wHZvb0OjE1kTTaS2kRckj.07cODtFRGHPX61l.",
-      "first_name": "hannah",
-      "last_name": "murillo",
-      "email": "hannah@gmail.com",
-      "admin": 1
     },
     {
       "id": "36ea1a0b-da6d-11ee-a77b-9828a63b47d6",

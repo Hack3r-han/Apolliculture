@@ -15,6 +15,7 @@ interface User {
 const UserAdmin = () => {
     const [users, setUsers] = useState<User[]>([]);
 
+    // FETCH USERS
     useEffect(() => {
         const fetchUsers = async () => {
           try {
@@ -32,13 +33,15 @@ const UserAdmin = () => {
 
         fetchUsers();
       }, []);
-
+    
+    // HANDLE EDIT
     const handleEdit = (index: number, updatedUser: Partial<User>) => {
         const updatedUsers = [...users];
         updatedUsers[index] = { ...updatedUsers[index], ...updatedUser };
         setUsers(updatedUsers);
     };
 
+    // HANDLE PUT REQUEST
     const handleSubmit = async (index: number, user: User) => {
         try {
             const response = await fetch(`http://localhost:3000/Users/${user.id}`, {
@@ -59,6 +62,25 @@ const UserAdmin = () => {
         }
     };
 
+    // HANDLE DELETE REQUEST
+    const handleDelete = async (userId: string) => {
+        try {
+            const response = await fetch(`http://localhost:3000/Users/${userId}`, {
+                method: 'DELETE',
+            });
+
+            if (response.ok) {
+                setUsers(users.filter(user => user.id !== userId));
+                console.log('User deleted successfully');
+            } else {
+                throw new Error('Failed to delete user');
+            }
+        } catch (error) {
+            console.error('Error deleting user:', error);
+        }
+    };
+
+    // RENDER ON SCREEN 
     return (
         <div style={{ backgroundImage: `url(${backgroundImage})` }}>
             <h1 className="text-center text-3xl font-bold my-10">USERS</h1>
@@ -85,7 +107,7 @@ const UserAdmin = () => {
                             </div>
                             <div className="p-4 flex justify-end">
                                 <button type="button" className="mr-3 text-sm bg-amber-500 hover:bg-amber-300 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline" onClick={() => handleSubmit(index, user)}>Save</button>
-                                <button type="button" className="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Delete</button>
+                                <button type="button" className="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline" onClick={() => handleDelete(user.id)}>Delete</button>
                             </div>
                         </div>
                     ))}

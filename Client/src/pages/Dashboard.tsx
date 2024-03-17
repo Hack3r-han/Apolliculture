@@ -19,6 +19,7 @@ const Dashboard = () => {
     const [products, setProducts] = useState<Product[]>([]);
     const [editProduct, setEditProduct] = useState<Product | null>(null);
 
+    // FETCH PRODUCTS
     useEffect(() => {
         const fetchProducts = async () => {
           try {
@@ -37,10 +38,30 @@ const Dashboard = () => {
         fetchProducts();
       }, []);
 
+    
+    // HANDLE EDIT
     const handleEdit = (product: Product) => {
         setEditProduct(product);
     };
 
+    // HANDLE DELETE
+    const handleDelete = async (productId: string) => {
+        try {
+            const response = await fetch(`http://localhost:3000/Products/${productId}`, {
+                method: 'DELETE',
+            });
+            if (response.ok) {
+                // If deletion is successful, update the products list
+                setProducts(products.filter(product => product.id !== productId));
+            } else {
+                throw new Error('Failed to delete the product.');
+            }
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    // RENDER ON SCREEN
     return (
         <div style={{backgroundImage: `url(${backgroundImage})`}}>
             <h1 className="text-center text-3xl font-bold my-10">PRODUCTS LIST</h1>
@@ -66,7 +87,11 @@ const Dashboard = () => {
                                 >
                                     Edit
                                 </button>
-                                <button type="button" className="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline">Delete</button>
+                                <button type="button" className="text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"
+                                        onClick={() => handleDelete(product.id)}
+                                >
+                                    Delete
+                                </button>
                             </div>
                         </div>
                     ))}
