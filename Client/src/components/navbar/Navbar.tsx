@@ -1,41 +1,65 @@
-import {Link} from 'react-router-dom';
-import { LiaCartPlusSolid } from 'react-icons/lia';
-import { FaMagnifyingGlass } from "react-icons/fa6";
+import  { useState } from 'react';
+import { FiMenu, FiX } from "react-icons/fi";
+import { FaUserCircle } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
-    return (
-  
-      <nav className="bg-amber-400 py:5 lg:py-5 relative ">
-        <div className="container mx-auto flex px-0 xl:px-0" >
-  
-          <div className='flex flex-grow'>
-            <img src="../src/assets/images/logo.png" alt='logo' className="w-40 h-auto md-6  lg:w-60 lg:mt-[-35px] " />
-          </div>
-          <div className='lg:hidden'>
-            <img src="menu-line.png" alt="menu" className='W-20 h-10 mt-9 mr-4 hover:bg-blackbg-amber-300 text-black border border-white rounded-md hover:boder-transparent hover:text-yellow-500 hover:bg-white transition duration-500 ease-in-out'/>
-          </div>
-  
-          <div className="lg:flex hidden flex-grow justify-between">
-  
-            <div className='flex justify-center item-center space-x-12 mt-8 '>
-            <Link to="/Home" className="text-white hover:text-black transition duration-500 ease-in-out">HOME</Link>
-            <Link to="/Home#about" className="text-white hover:text-black transition duration-500 ease-in-out">ABOUT US</Link>
-              <a href="#" className="text-white hover:text-black transition duration-500 ease-in-out">PRODUCTS</a>
-              <a href="#contact" className="text-white hover:text-black transition duration-500 ease-in-out">CONTACT US</a>
-            </div>
-            <div className=' mt-9 gap-4 space-x-4'>
-            <Link to="/dashboard" className=" bg-amber-300 text-black border border-white py-2 px-5 rounded-md hover:border-transparent hover:text-yellow-500 hover:bg-white transition ease-in duration-500">Admin</Link>
-            <Link to="/loginregister" className=" bg-amber-300 text-black border border-white py-2 px-5 rounded-md hover:border-transparent hover:text-yellow-500 hover:bg-white transition ease-in duration-500">Sign in</Link>
-            </div>
+  const [isOpen, setIsOpen] = useState(false);
+
+  function handleClick() {
+    setIsOpen(!isOpen);
+  }
+
+  return (
+    <nav className="bg-amber-400 lg:py-1 relative">
+      <div className="container mx-auto flex px-1 xl:px-0 items-center"> 
+        <div className='flex flex-grow'>
+        <img src="../src/assets/images/ApolliLogo.png" alt='logo' className="w-40 h-auto p-2 lg:w-25 lg:mt-2" /> 
+        </div>
+        <div className='lg:hidden'>
+          <button 
+            className='mt-11 mr-5 bg-amber-300 text-black border border-white rounded-md hover:border-transparent hover:text-yellow-500 hover:bg-white transition ease-in duration-500 ease-in-out'
+            onClick={handleClick}
+          >
+            {isOpen ? <FiX className="w-8 h-8" /> : <FiMenu className="w-8 h-8" />}
+          </button>
+        </div>
+
+        <div className={`lg:hidden fixed top-0 left-0 h-full bg-white w-60 shadow-md z-50 transition duration-300 ease-in-out transform ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
+          <div>
+          <img src="../src/assets/images/ApolliLogo.png" alt='logo' className="w-40 h-auto md-6  lg:w-60 lg:mt-[-35px] " />       </div>
+          
+          <div className='p-4'>
+            <Link to="/Home" className="block text-lg text-gray-800 font-semibold mb-2">HOME</Link>
+            <Link to="/Home#about" className="block text-lg text-gray-800 font-semibold mb-2">ABOUT US</Link>
+            <Link to="/ProductList" className="block text-lg text-gray-800 font-semibold mb-2">PRODUCTS</Link>
+            <Link to="#contact" className="block text-lg text-gray-800 font-semibold mb-2">CONTACT US</Link>
+            <Link to="/users" className="block text-amber-400 text-xl font-semibold mb-2">USERS</Link>
+            <Link to="/dashboard" className="block text-amber-400 text-xl font-semibold mb-2">SELL</Link>
+            <Link to="/loginPage" className="block text-amber-400 text-xl font-semibold mb-2">SIGN IN</Link>
           </div>
         </div>
-        <div className='gap-4 space-x-1 flex justify-center lg:mt-[-60px]'>
-        <a href="" aria-label="cart" className=" mr-2 mb-8 text-white-500 text-3xl "><LiaCartPlusSolid /></a>
-          <a href="" aria-label="inglass" className="  text-white-500 text-2xl"><FaMagnifyingGlass /></a>
-          <input  className=" mb-5 bg-white border border-amber-500 text-black w-2/12 lg:w-4/12 h-9 rounded-3xl px-4"type='text' placeholder="Search..." />
+
+        {/* Menú dispositivos grandes */}
+        <div className="lg:flex hidden flex-grow justify-between">
+          <div className='item-center justify-center flex space-x-16 mt-3 ml-4'>
+            <Link to="/" className="text-white hover:text-black transition duration-500 ease-in-out">HOME</Link>
+            <Link to="/#about" className="text-white hover:text-black transition duration-500 ease-in-out">ABOUT US</Link>
+            <Link to="/ProductList" className="text-white hover:text-black transition duration-500 ease-in-out">PRODUCTS</Link>
+            <Link to="#contact" className="text-white hover:text-black transition duration-500 ease-in-out">CONTACT US</Link>
           </div>
-      </nav>
-    );
-  };
-  
-  export default Navbar;
+          <div className='flex items-center px-9 mt-9'>
+            <Link to="/users"><FaUserCircle className="w-8 h-8 mr-3" /></Link>
+            <Link to="/dashboard" className="bg-amber-300 text-black border border-white py-2 px-5 rounded-md hover:border-transparent hover:text-yellow-500 hover:bg-white transition ease-in duration-500 ease-in-out mr-3">Sell</Link>
+            <Link to="/loginPage" className="bg-amber-300 text-black border border-white py-2 px-5 rounded-md hover:border-transparent hover:text-yellow-500 hover:bg-white transition ease-in duration-500 ease-in-out">Sign in</Link>
+          </div>
+          </div>
+      <div className='lg: hidden flex justify-center lg:mt-[-60px]'>
+          <input className=" mb-5 bg-white border border-amber-500 text-black w-8/12 h-7  lg:w-6/12 h-9 rounded-3xl px-4" type='text' placeholder="Search..." />
+      </div>
+    </div>
+    </nav>
+  );
+};
+
+export default Navbar;
