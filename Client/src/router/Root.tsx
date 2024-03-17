@@ -4,10 +4,11 @@ import Footer from "../components/footer/Footer";
 
 function Root() {
     return (
-        <>
+        <>   <div className= "bg-white">
             <Navbar />
             <Outlet />
             <Footer/>
+            </div>
         </>
     )
 }
