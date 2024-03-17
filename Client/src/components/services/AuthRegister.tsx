@@ -8,7 +8,7 @@ interface User {
   
   const registerUser = async (user: User): Promise<boolean> => {
     try {
-      const response = await fetch("http://localhost:3002/mockUsers", {
+      const response = await fetch("http://localhost:3000/Users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

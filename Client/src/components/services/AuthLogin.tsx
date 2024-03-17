@@ -7,7 +7,7 @@ interface User {
   const AuthLogin = {
     login: async (username: string, password: string): Promise<User | null> => {
       try {
-        const response = await fetch("http://localhost:3002/mockUsers");
+        const response = await fetch("http://localhost:3000/Users");
         if (!response.ok) {
           throw new Error("Failed to fetch users");
         }
