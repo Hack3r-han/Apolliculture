@@ -45,13 +45,7 @@ export const router = createBrowserRouter([
                 element: <UserAdmin />,
                 
             },
-        
-        
-    
-    {
-        path: "/Modal",
-        element: <Modal/>,
-        
+        ],   
     },
     {
         path: "/ShoppingCar",

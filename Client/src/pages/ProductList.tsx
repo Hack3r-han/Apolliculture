@@ -32,7 +32,7 @@ const ProductList: React.FC = () => {
           key={product.id}
           image={product.image}
           name={product.name}
-          //description={product.description}
+          description={product.description}
           price={product.price}
           units_stock={product.units_stock} 
         />
