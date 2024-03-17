@@ -1,9 +1,7 @@
-
 import  {createBrowserRouter} from "react-router-dom"
 import Home from '../pages/Home'
 import LoginPage from "../pages/LoginPage"
 import RegisterPage from "../pages/RegisterPage"
-import Modal from "../pages/Modal"
 import Dashboard from "../pages/Dashboard"
 import ProductList from "../pages/ProductList"
 import Root from './Root'
