@@ -8,6 +8,7 @@ import Dashboard from "../pages/Dashboard"
 import ProductList from "../pages/ProductList"
 import Root from './Root'
 import UserAdmin from "../pages/UserAdmin";
+import ShoppingCar from "../pages/ShoppingCar"
 
 
 
@@ -18,7 +19,7 @@ export const router = createBrowserRouter([
         element: <Root />,
         children: [
             {
-                path: "/home",
+                path: "/",
                 element: <Home />,
                
             },
@@ -44,13 +45,18 @@ export const router = createBrowserRouter([
                 element: <UserAdmin />,
                 
             },
-        ],
         
-    },
+        
+    
     {
         path: "/Modal",
         element: <Modal/>,
         
     },
+    {
+        path: "/ShoppingCar",
+    element:<ShoppingCar/>}]
+    }
 ]);
+
 
