@@ -78,19 +78,10 @@
       "id": "36ea1a0b-da6d-11ee-a77b-9828a63b47d6",
       "username": "denis",
       "password": "1234",
-      "first_name": "denis",
-      "last_name": "torres",
+      "first_name": "Denisse",
+      "last_name": "Torres",
       "email": "denis@gmail.com",
       "admin": 1
-    },
-    {
-      "id": "68822f2e-dfcd-11ee-8b47-9828a63b47d6",
-      "username": "loli",
-      "password": "$2b$08$OCtPqZYUj7Uy6fe779wRHON4rVmOm16BOrLWLWNDckOBfze5wPabK",
-      "first_name": "lola",
-      "last_name": "lopez",
-      "email": "lola@",
-      "admin": 0
     },
     {
       "id": "7392518f-da6c-11ee-a77b-9828a63b47d6",
