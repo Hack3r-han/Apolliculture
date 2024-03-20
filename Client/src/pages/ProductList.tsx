@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Products from '../components/products/Products';
+import Products from '../components/Products/Products';
 
 const ProductList: React.FC = () => {
   const [products, setProducts] = useState<any[]>([]); // Estado para almacenar los productos

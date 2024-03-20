@@ -38,7 +38,7 @@ const Navbar = () => {
             <Link to="/Home" className="block text-lg text-gray-800 font-semibold mb-4 hover:text-amber-400 transition ease-in duration-300 ease-in-out">HOME</Link>
             <Link to="/Home#about" className="block text-lg text-gray-800 font-semibold mb-4 hover:text-amber-400 transition ease-in duration-300 ease-in-out">ABOUT US</Link>
             <Link to="/ProductList" className="block text-lg text-gray-800 font-semibold mb-4 hover:text-amber-400 transition ease-in duration-300 ease-in-out">PRODUCTS</Link>
-            <Link to="#contact" className="block text-lg text-gray-800 font-semibold mb-8 hover:text-amber-400 transition ease-in duration-300 ease-in-out">CONTACT US</Link>
+            <a href="#contact" className="block text-lg text-gray-800 font-semibold mb-8 hover:text-amber-400 transition ease-in duration-300 ease-in-out">CONTACT US</a>
             <Link to="/dashboard" className="block text-amber-400 text-xl font-semibold mb-4 hover:text-black transition ease-in duration-300 ease-in-out">ADMIN</Link>
             <Link to="/loginPage" className="block text-amber-400 text-xl font-semibold mb-4 hover:text-black transition ease-in duration-300 ease-in-out">SIGN IN</Link>
           
@@ -51,7 +51,7 @@ const Navbar = () => {
             <Link to="/" className="text-white hover:text-black transition duration-500 ease-in-out">HOME</Link>
             <Link to="/#about" className="text-white hover:text-black transition duration-500 ease-in-out">ABOUT US</Link>
             <Link to="/ProductList" className="text-white hover:text-black transition duration-500 ease-in-out">PRODUCTS</Link>
-            <Link to="contact" className="text-white hover:text-black transition duration-500 ease-in-out">CONTACT US</Link>
+            <a href="#contact" className="text-white hover:text-black transition duration-500 ease-in-out">CONTACT US</a>
           <OpenCart />
           </div>
           <div className='flex items-center px-9 mt-9'>
