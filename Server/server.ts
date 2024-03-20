@@ -9,6 +9,7 @@ import ProductsRouter from './routes/ProductsRouter';
 import CategoriesRouter from './routes/CategoriesRouter';
 import OrdersRouter from './routes/OrdersRouter';
 import OrdersDetailsRouter from './routes/OrdersDetailsRouter'
+const cors = require('cors')
 
 //importa archivo de configuración de Cloudinary y el multer
 import CloudinaryRouter from './routes/CloudinaryRouter';
@@ -19,6 +20,11 @@ const app = express();
 const port = 3000;//puerto en el que el servidor escucha las solicitudes HTTP
 //Crea variable upload para manejar la subida de archivos
 const upload = multer({ dest: 'uploads/' });
+
+const corsOptions = {
+  origin: 'http://localhost:5173',
+}
+app.use(cors(corsOptions))
 
 app.use(express.json()) 
 

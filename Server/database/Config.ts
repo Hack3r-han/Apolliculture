@@ -4,7 +4,7 @@ import { createPool } from 'mysql2/promise';
 const CONFIG = {
     host: 'localhost',
     user: 'root',
-    password: '1234',
+    password: '123456789',
     database: 'apolliculture',
     port: 3306
 };

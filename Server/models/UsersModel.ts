@@ -34,7 +34,7 @@ const UsersModel = {
     },    
 
     //CREA un nuevo usuario en BD con los datos proporcionados y devuelve el resultado de la operación de inserción
-    createUser: async (first_name: string, last_name: string, username: string, password: string, email: string, admin: boolean) => {
+    createUser: async (first_name: string, last_name: string, username: string, password: string, email: string, admin: number) => {
         const [result] = await connection.query(`INSERT INTO users (first_name, last_name, username, password, email, admin) VALUES ('${first_name}', '${last_name}', '${username}', '${password}', '${email}', ${admin})`);
     /*createUser: async (body: any) => {
         const result = connectionPrisma.users.create({

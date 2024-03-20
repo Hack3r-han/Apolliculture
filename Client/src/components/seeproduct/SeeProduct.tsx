@@ -3,6 +3,7 @@ import Modal from "react-modal";
 import { RiStarLine } from "react-icons/ri";
 import { LiaCartPlusSolid } from "react-icons/lia";
 import { AiOutlineHeart } from "react-icons/ai";
+import AddProducts from "../addproducts/AddProducts";
 
 interface SeeProductProps {
   image: string;
@@ -22,11 +23,19 @@ const SeeProduct: React.FC<SeeProductProps> = ({
   units_stock,
 }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const product = {image,
+    name,
+    description,
+    price,
+    units_stock}
+  const AddProduct = () =>{
+    localStorage.setItem("product", JSON.stringify(product));
+  }
 
   return (
     <section>
       <button
-        className="bg-amber-400 text-black border border-white py-2 px-4 rounded-md hover:boder-transparent hover:text-white"
+        className="bg-amber-400 text-black border border-white py-2 px-4 rounded-md hover:boder-transparent hover:text-white "
         onClick={() => setModalIsOpen(true)}
       >
         View Details
@@ -66,7 +75,8 @@ const SeeProduct: React.FC<SeeProductProps> = ({
               <p className="text-lg text-center mb-5">{description}</p>
             </div>
             <div className="mb-5 bg-black text-white border border-white py-2 px-8 rounded-md hover:border-black hover:text-yellow-500 hover:bg-white transition ease-in duration-500 ease-in-out">
-              <button className="text justify-center">ADD TO CART</button>
+              <button className="text justify-center"
+              onClick={AddProduct}>ADD TO CART</button>
             </div>
             <div className="flex justify-center">
               <a

@@ -40,7 +40,7 @@ const UsersController = {
              // Obtiene los datos del cuerpo de la solicitud
             const { first_name, last_name, username, password, email, admin } = req.body;
             // Verifica si hay datos faltantes
-            if (!first_name || !last_name || !username || !password || !email || (admin === undefined)) {
+            if (!first_name || !last_name || !username || !password || !email) {
                 res.status(400).json({ message: 'Please enter the user information' });
                 return;
             }

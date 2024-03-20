@@ -1,19 +1,21 @@
 interface User {
     username: string;
     password: string;
-    firstName: string;
-    lastName: string;
+    first_name: string;
+    last_name: string;
     email: string;
+    admin: boolean;
   }
   
   const registerUser = async (user: User): Promise<boolean> => {
     try {
-      const response = await fetch("http://localhost:3000/Users", {
+      const response = await fetch ("http://localhost:3000/Users", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(user),
+      
       });
   
       if (response.ok) {

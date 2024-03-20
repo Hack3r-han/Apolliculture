@@ -7,12 +7,12 @@ import registerUser from "../services/AuthRegister";
 const Register = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [first_name, setFirstName] = useState("");
+  const [last_name, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [error, setError] = useState(false);
-  const [successMessage, setSuccessMessage] = useState("");
-  const navigate = useNavigate();
+/*   const [successMessage, setSuccessMessage] = useState("");
+ */  const navigate = useNavigate();
 
   const handleUsernameChange = (e: { target: { value: SetStateAction<string>; }; }) => {
     setUsername(e.target.value);
@@ -38,22 +38,24 @@ const Register = () => {
     e.preventDefault();
     
     // Verificar que todos los campos estén llenos
-    if (username === "" || password === "" || firstName === "" || lastName === "" || email === "") {
+    if (username === "" || password === "" || first_name === "" || last_name === "" || email === "") {
       setError(true);
-      setSuccessMessage("Welcomo to Apolliculture!");
-      return;
+/*       setSuccessMessage("Welcomo to Apolliculture!");
+ */      return;
     }
 
        // Construir el objeto de usuario
        const newUser = {
         username,
         password,
-        firstName,
-        lastName,
+        first_name,
+        last_name,
         email,
+        admin : false,
       };
-
       const success = await registerUser(newUser);
+      
+      console.log(newUser)
       if (success) {
         // Manejar redirección u otras acciones de éxito aquí
         console.log('Usuario registrado exitosamente.');
@@ -91,14 +93,14 @@ const Register = () => {
             type="text"
             placeholder="First Name"
             className="block text-sm py-3 px-4 rounded-lg w-full border outline-yellow-500"
-            value={firstName}
+            value={first_name}
             onChange={handleFirstNameChange}
           />
           <input
             type="text"
             placeholder="Last Name"
             className="block text-sm py-3 px-4 rounded-lg w-full border outline-yellow-500"
-            value={lastName}
+            value={last_name}
             onChange={handleLastNameChange}
           />
           <input
