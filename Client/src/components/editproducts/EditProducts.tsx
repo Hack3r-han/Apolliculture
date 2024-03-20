@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import backgroundImage from "../../assets/images/Bees_bg.jpeg";
 
 interface EditProductsProps {
-  product: Product; // Use the product prop passed from Dashboard
+  product: Product; 
   onClose: () => void;
 }
 
@@ -13,7 +13,6 @@ interface Product {
   description: string;
   price: number;
   units_stock: number;
-  category: string;
   image: string;
 }
 
@@ -36,7 +35,7 @@ const EditProducts: React.FC<EditProductsProps> = ({ product, onClose }) => {
 
         if (response.ok) {
             console.log('Product updated successfully');
-            onClose(); // Close the modal after editing
+            onClose(); 
         } else {
             throw new Error('Failed to update product');
         }
@@ -99,20 +98,6 @@ const EditProducts: React.FC<EditProductsProps> = ({ product, onClose }) => {
                 value={updateProduct.units_stock}
                 onChange={(e) => setUpdatedProduct({ ...updateProduct, units_stock: parseInt(e.target.value) })}
               />
-            </div>
-            <div className="mb-4">
-              <label className="block text-amber-400 font-semibold mb-2">Category</label>
-              <select
-                className="w-full px-3 py-2 border rounded-lg bg-yellow-100 focus:border-blue-500"
-                required
-                value={updateProduct.category}
-                onChange={(e) => setUpdatedProduct({ ...updateProduct, category: e.target.value })}
-              >
-                <option value="honey">Honey</option>
-                <option value="health">Health</option>
-                <option value="home">Home Decor</option>
-                <option value="beekeeping">Beekeeping</option>
-              </select>
             </div>
             <button
               type="submit"

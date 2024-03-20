@@ -11,19 +11,25 @@ const AddProducts = () => {
     description: "",
     price: 0,
     units_stock: 0,
-    category: "",
     image: ""
   });
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    console.log("New Product:", newProduct);
+    
     try {
-      const response = await fetch("http://localhost:3000/Products", {
+      const response = await fetch("http://localhost:3000/products", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(newProduct),
+        body: JSON.stringify({
+          ...newProduct,
+          price: Number(newProduct.price),
+          units_stock: Number(newProduct.units_stock),
+          user_id: "1712b03a-e6b5-11ee-9c4c-bee74cc5f98e",
+        }),
       });
       if (response.ok) {
         console.log("Product added successfully");
@@ -33,7 +39,6 @@ const AddProducts = () => {
           description: "",
           price: 0,
           units_stock: 0,
-          category: "",
           image: ""
         });
         setModalIsOpen(false);
@@ -45,6 +50,7 @@ const AddProducts = () => {
     }
   };
 
+  
   const handleChange = (event) => {
     const { name, value } = event.target;
     setNewProduct((prevProduct) => ({
@@ -126,7 +132,7 @@ const AddProducts = () => {
                 type="number"
                 className="w-full px-3 py-2 border rounded-lg bg-yellow-100 focus:border-blue-500"
                 required
-                name="stock"
+                name="units_stock"
                 value={newProduct.units_stock}
                 onChange={handleChange}
                 placeholder="20"
@@ -135,29 +141,12 @@ const AddProducts = () => {
 
             <div className="mb-4">
               <label className="block text-amber-400 font-semibold mb-2">
-                Category
-              </label>
-              <select
-                className="w-full px-3 py-2 border rounded-lg bg-yellow-100 focus:border-blue-500"
-                required
-                name="category"
-                value={newProduct.category}
-                onChange={handleChange}
-              >
-                <option value="honey">Honey</option>
-                <option value="health">Health</option>
-                <option value="home">Home Decor</option>
-                <option value="beekeeping">Beekeeping</option>
-              </select>
-            </div>
-
-            <div className="mb-4">
-              <label className="block text-amber-400 font-semibold mb-2">
                 Image
               </label>
               <input
-                type="file"
+                type="text"
                 className="w-full px-3 py-2 border rounded-lg bg-yellow-100 focus:border-blue-500"
+                required
                 name="image"
                 value={newProduct.image}
                 onChange={handleChange}
