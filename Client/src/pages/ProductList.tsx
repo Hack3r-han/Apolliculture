@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Product from '../components/Products/Products';
+import Products from '../components/products/Products';
 
 const ProductList: React.FC = () => {
   const [products, setProducts] = useState<any[]>([]); // Estado para almacenar los productos
@@ -25,10 +25,14 @@ const ProductList: React.FC = () => {
   }, []);
 
   return (
+    <div>
+      <div className="flex justify-around  mt-7 space-x-16 lg:mb-10 lg:mt-16">
+        <h1 className="text-xl lg:text-2xl lg:space text-bold ">Choose your products</h1>
+      </div>
     <div className='p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16'>
-    
+
       {products.map(product => (
-        <Product
+        <Products
           key={product.id}
           image={product.image}
           name={product.name}
@@ -37,6 +41,7 @@ const ProductList: React.FC = () => {
           units_stock={product.units_stock} 
         />
       ))}
+    </div>
     </div>
   );
 };
