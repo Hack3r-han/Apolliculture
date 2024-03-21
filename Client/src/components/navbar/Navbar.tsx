@@ -35,8 +35,8 @@ const Navbar = () => {
           
           <div className='p-8 hoover:bg-amber-300'>
             
-            <Link to="/Home" className="block text-lg text-gray-800 font-semibold mb-4 hover:text-amber-400 transition ease-in duration-300 ease-in-out">HOME</Link>
-            <Link to="/Home#about" className="block text-lg text-gray-800 font-semibold mb-4 hover:text-amber-400 transition ease-in duration-300 ease-in-out">ABOUT US</Link>
+            <Link to="/" className="block text-lg text-gray-800 font-semibold mb-4 hover:text-amber-400 transition ease-in duration-300 ease-in-out">HOME</Link>
+            <Link to="/#about" className="block text-lg text-gray-800 font-semibold mb-4 hover:text-amber-400 transition ease-in duration-300 ease-in-out">ABOUT US</Link>
             <Link to="/ProductList" className="block text-lg text-gray-800 font-semibold mb-4 hover:text-amber-400 transition ease-in duration-300 ease-in-out">PRODUCTS</Link>
             <a href="#contact" className="block text-lg text-gray-800 font-semibold mb-8 hover:text-amber-400 transition ease-in duration-300 ease-in-out">CONTACT US</a>
             <Link to="/dashboard" className="block text-amber-400 text-xl font-semibold mb-4 hover:text-black transition ease-in duration-300 ease-in-out">ADMIN</Link>
