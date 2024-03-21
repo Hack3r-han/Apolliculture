@@ -3,7 +3,6 @@ import Modal from "react-modal";
 import { RiStarLine } from "react-icons/ri";
 import { LiaCartPlusSolid } from "react-icons/lia";
 import { AiOutlineHeart } from "react-icons/ai";
-import AddProducts from "../addproducts/AddProducts";
 
 interface SeeProductProps {
   image: string;
@@ -23,19 +22,29 @@ const SeeProduct: React.FC<SeeProductProps> = ({
   units_stock,
 }) => {
   const [modalIsOpen, setModalIsOpen] = useState(false);
-  const product = {image,
+  const product = {
+    image,
     name,
     description,
     price,
-    units_stock}
-  const AddProduct = () =>{
-    localStorage.setItem("product", JSON.stringify(product));
-  }
+    units_stock,
+  };
+
+  const AddProduct = () => {
+    // Obtiene la lista actual de productos del carrito del almacenamiento local
+    const cartProducts = JSON.parse(localStorage.getItem("cartProducts") || "[]");
+
+    // Agrega el nuevo producto a la lista de productos del carrito
+    const updatedCartProducts = [...cartProducts, product];
+
+    // Guarda la lista actualizada en el almacenamiento local
+    localStorage.setItem("cartProducts", JSON.stringify(updatedCartProducts));
+  };
 
   return (
     <section>
       <button
-        className="bg-amber-400 text-black border border-white py-2 px-4 rounded-md hover:boder-transparent hover:text-white "
+        className="bg-amber-400 text-black border border-white py-2 px-4 rounded-md hover:border-transparent hover:text-white"
         onClick={() => setModalIsOpen(true)}
       >
         View Details
