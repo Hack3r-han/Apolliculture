@@ -3,7 +3,7 @@ import Modal from "react-modal";
 import backgroundImage from "../../assets/images/Bees_bg.jpeg";
 
 interface EditProductsProps {
-  product: Product; 
+  product: Product; // Use the product prop passed from Dashboard
   onClose: () => void;
 }
 
@@ -25,17 +25,29 @@ const EditProducts: React.FC<EditProductsProps> = ({ product, onClose }) => {
     event.preventDefault();
 
     try {
-        const response = await fetch(`http://localhost:3000/Products/${product.id}`, { //END POINT
+        // Convert price and units_stock to numbers
+        const updatedProduct: Product = {
+            ...updateProduct,
+            price: Number(updateProduct.price),
+            units_stock: Number(updateProduct.units_stock)
+        };
+
+        // Check if price and units_stock are valid numbers
+        if (isNaN(updatedProduct.price) || isNaN(updatedProduct.units_stock)) {
+            throw new Error('Price and stock must be valid numbers.');
+        }
+
+        const response = await fetch(`http://localhost:3000/Products/${product.id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify(updateProduct),
+            body: JSON.stringify(updatedProduct),
         });
 
         if (response.ok) {
             console.log('Product updated successfully');
-            onClose(); 
+            onClose(); // Close the modal after editing
         } else {
             throw new Error('Failed to update product');
         }
